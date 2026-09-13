@@ -1,12 +1,12 @@
 # Name: Zoey Spies
 # KUID: 3136594
 # LAB Session (Day/Time): Monday 11 AM
-# LAB Assignment:
-# Description:
+# LAB Assignment: Lab 2
+# Description: Takes command line input and gives response about if they are
 #
 #
 #
-# Collaborators/Sources:
+# Collaborators/Sources: EECS 268 Notes
 
 #   Note: if you are working in python, you are  
 #   REQUIRED to call this function to get your
@@ -28,19 +28,18 @@ get_pairs = get_mapping_pairs()
 inputs = []
 outputs = []
 
+#loops through user input and pulls out the pairs into seperate lists
 for i in get_pairs:
     inputs.append(i[0])
     outputs.append(i[1])
 
 #check if is function
-print(inputs)
-print(set(inputs))
-print(outputs)
 if len(inputs) != len(set(inputs)):
     print("Not function")
 
 else:
-    oto = inputs == outputs
+else:
+    oto = inputs == set(outputs)
 
     onto = set(outputs) == {'A', 'B', 'C', 'D'}
 
