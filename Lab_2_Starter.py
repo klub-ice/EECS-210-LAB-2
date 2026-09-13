@@ -32,7 +32,21 @@ for i in pairs:
     inputs.append(i[0])
     outputs.append(i[1])
 
-#Sample code
+#check if is function
+if inputs != outputs:
+    print("Not function")
+
+else:
+    oto = inputs == outputs
+
+    onto = set(outputs).intersection(set(inputs))
+
+    if oto and onto:
+        print("Function, one to one, onto")
+
+
+
+'''#Sample code
 #With the following input: (3, A) (2, D) (3, C)
 pair_list = get_mapping_pairs()
 #The first element of the list is ["3","A"]
@@ -42,3 +56,4 @@ print(pair_list[0][0])
 #or more clearly:
 first_pair = pair_list[0]
 print(first_pair[0])
+'''
