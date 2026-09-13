@@ -2,7 +2,7 @@
 # KUID: 3136594
 # LAB Session (Day/Time): Monday 11 AM
 # LAB Assignment: Lab 2
-# Description: Takes command line input and gives response about if they are
+# Description: Takes command line input and gives response about if they are functions, one-to-one, or onto
 #
 #
 #
@@ -37,7 +37,6 @@ for i in get_pairs:
 if len(inputs) != len(set(inputs)):
     print("Not function")
 
-else:
 else:
     oto = inputs == set(outputs)
 
