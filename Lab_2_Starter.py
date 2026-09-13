@@ -33,27 +33,23 @@ for i in pairs:
     outputs.append(i[1])
 
 #check if is function
-if inputs != outputs:
+print(inputs)
+print(set(inputs))
+print(outputs)
+if len(inputs) != len(set(inputs)):
     print("Not function")
 
 else:
     oto = inputs == outputs
 
-    onto = set(outputs).intersection(set(inputs))
+    onto = set(outputs) == {'A', 'B', 'C', 'D'}
 
+    #check both then go through checking each
     if oto and onto:
         print("Function, one to one, onto")
-
-
-
-'''#Sample code
-#With the following input: (3, A) (2, D) (3, C)
-pair_list = get_mapping_pairs()
-#The first element of the list is ["3","A"]
-print(pair_list[0])
-#The first element of the first pair is 3:
-print(pair_list[0][0])
-#or more clearly:
-first_pair = pair_list[0]
-print(first_pair[0])
-'''
+    elif oto:
+        print("Function, one to one")
+    elif onto:
+        print("Function, onto")
+    else:
+        print("Function")
