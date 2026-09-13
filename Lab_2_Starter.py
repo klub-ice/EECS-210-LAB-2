@@ -15,13 +15,22 @@
 #   Returns a list of number,letter pairs
 def get_mapping_pairs() -> str:
     x = input("Enter your mapping pairs: ")
-    items = x.replace("(","").replace(" ","").strip(")").split(")")
+    items = x.replace("(", "").replace(" ", "").strip(")").split(")")
     pairs = []
     for item in items:
         pairs.append(item.split(","))
     return pairs
 
+
 # Your Code Here
+pairs = get_mapping_pairs()
+
+inputs = []
+outputs = []
+
+for i in pairs:
+    inputs.append(i[0])
+    outputs.append(i[1])
 
 #Sample code
 #With the following input: (3, A) (2, D) (3, C)
