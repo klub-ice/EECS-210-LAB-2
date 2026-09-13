@@ -23,12 +23,12 @@ def get_mapping_pairs() -> str:
 
 
 # Your Code Here
-pairs = get_mapping_pairs()
+get_pairs = get_mapping_pairs()
 
 inputs = []
 outputs = []
 
-for i in pairs:
+for i in get_pairs:
     inputs.append(i[0])
     outputs.append(i[1])
 
